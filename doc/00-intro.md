@@ -132,7 +132,11 @@ Create a new `composer.bat` file alongside `composer.phar`:
 ```sh
 C:\bin>echo @php "%~dp0composer.phar" %*>composer.bat
 ```
-
+* For Windows 10 / IIS  PHP 5.4 + the following BAT structure works better:
+```sh
+@ECHO OFF
+php composer.phar %~1
+```
 Add the directory to your PATH environment variable if it isn't already.
 For information on changing your PATH variable, please see
 [this article](http://www.computerhope.com/issues/ch000549.htm) and/or
